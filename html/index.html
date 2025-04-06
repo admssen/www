@@ -6,17 +6,30 @@
 <title>RBAC</title> 
 </head>
 
+<script type="text/javascript" src="scripts/identify.js"></script>
+
 <body>
-<center>
-<div class="loga">
-  <div>IDENTIFY</div>
-  <input type="text" class="name" id="name">
+<div class="grid">
+  <div class="login">
+    <div class="main loga">
+      <div class="report">IDENTIFICATION</div>
+      <div class="form">
+        <input type="text" class="sender" id="name">
+        <button class="chatter" onclick="identify()">SUBMIT</button>
+      </div>
+    </div>
+    <div class="main pass">
+      <div class="report">AUTHENTIFICATION</div>
+      <div class="form">
+        <input type="password" class="sender" id="pass">
+        <button class="chatter">SUBMIT</button>
+      </div>
+    </div>
+    <div class="main auth">
+      <div>AUTHORIZED AS:</div>
+    </div>
+  </div>
 </div>
-<div class="pass">
-  <div>AUTHENTIFY</div>
-  <input type="text" class="name" id="pass">
-</div>
-</center>
 </body>
 
 </html>

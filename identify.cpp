@@ -4,6 +4,7 @@
 #include <fstream>
 
 int main(int argc, char **argv){
+  system
   std::ifstream file("subjects.txt");
   std::string foreach;
   char output = '0';

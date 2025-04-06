@@ -30,6 +30,11 @@ button {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  background-color: black;
+}
+
+.login {
+  display: grid;
 }
 
 .left {
@@ -185,49 +190,19 @@ button {
   width: 40px;
   height: auto;
   margin-left: 8px;
-  background-image: url("send.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #7789c9;
   border-color: transparent;
   border-radius: 4px;
   color: #f1e7f8;
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
 }
 
 .chatter:hover {
   background-color: #aaaaaa;
 }
 
-.small {
-  font-size: 8pt;
-}
-
-.fineleft {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-  font-size: 10pt;
-}
-
-.fineright {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  font-size: 10pt;
-  color: #7789c9;
-}
-
 .sender {
-  position: absolute;
-  width: 85%;
-  height: auto;
-  top: 2px;
-  bottom: 2px;
-  left: 2px;
   background-color: #101033;
   border-color: transparent;
   outline: none;
@@ -236,162 +211,6 @@ button {
   margin-right: 10px;
 }
 
-.onlinecount {
-  position: absolute;
-  left: 1px;
-  top: 1px;
-  bottom: 1px;
-  border-radius: 4px 0px 0px 0px;
-  padding: 6px 4px;
-  background-color: #aaaaff;
-  color: #002200;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-weight: bold;
-  font-size: 8pt;
-}
-
-.namer {
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  width: 122px;
-  background-color: #121222;
-  border-color: transparent;
-  outline: none;
-  border-radius: 4px;
-  color: #7789c9;
-  margin-left: auto;
-}
-
-.iconed {
-  padding: 6px 6px;
-}
-
-.day{
-  max-width: 50%;
-  margin-bottom: 2px;
-  font-size: 26pt;
-  font-family: 'Trebuchet MS', sans-serif;
-  font-weight: lighter;
-}
-
-.barright {
-  position: absolute;
-  border-radius: 0px 4px 4px 0px;
-  padding: 10px 16px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  background-color: #00000044;
-  margin-left: auto;
-}
-
-.baredge {
-  display: grid;
-}
-
-.ip {
-  margin-top: auto;
-  text-align: center;
-  margin-bottom: auto;
-  min-width: 160px;
-  max-height: 12px;
-  border-radius: 2px;
-  font-size: 10pt;
-  transition-duration: 0.4s;
-  padding: 4px;
-}
-
-.daytime {
-  max-width: 40%;
-  margin-top: 36px;
-  margin-bottom: auto;
-  font-size: 8pt;
-  font-family: 'Trebuchet MS', sans-serif;
-}
-
-.follower {
-  margin-top: auto;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 8pt;
-  font-weight: bold;
-}
-
-.lamp {
-  margin-top: auto;
-  margin-right: 5px;
-  margin-bottom: auto;
+.report {
   font-size: 12pt;
-  font-family: 'Trebuchet MS', sans-serif;
-  color: #aaaaaa;
-}
-
-.diode {
-  max-height: 12px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 4px;
-}
-
-.main.messenger {
-  position: absolute;
-  width: auto;
-  height: 24px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 8px 12px;
-  border-radius: 0px 0px 5px 5px;
-}
-
-.main.social {
-  display: flex;
-  border-radius: 5px 5px 0px 0px;
-  font-size: 12pt;
-  position: absolute;
-  width: auto;
-  height: 24px;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0px 12px;
-}
-
-.msg {
-  background-color: #aaaacc22;
-  color: #aaaaaa;
-  margin-bottom: 10px;
-  margin-left: 16px;
-  border-radius: 2px;
-  width: 88%;
-  font-size: 12pt;
-  padding: 4px 8px;
-  word-wrap: break-word;
-  box-shadow: 0px 2px #00000044;
-  text-shadow: 0px 1px #00000044;
-}
-.author {
-  font-size: 10pt;
-  color: #33ddff;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.plain {
-  font-size: 10pt;
-}
-
-.effect {
-  position: absolute;
-  left: 0px;
-  top: 1px;
-  bottom: 1px;
-  width: 0%;
-  background-color: #88ff88;
-  transition-duration: 0.4s;
 }
