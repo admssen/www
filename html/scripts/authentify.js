@@ -13,7 +13,7 @@ function authentify() {
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
-            document.getElementById('identified').innerHTML="IDENTIFICATION: FAILURE";
+            document.getElementById('identified').innerHTML="AUTH FAILURE";
         }
     }
     q.onerror = function() {
