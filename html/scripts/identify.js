@@ -4,7 +4,7 @@ function identify() {
     q.open('POST', 'scripts/identify.php', true);
     q.onload = function() {
         let stat = this.responseText;
-        console.log("bruh");
+        console.log(stat);
     }
     q.onerror = function() {
         console.log("nuh-uh");
