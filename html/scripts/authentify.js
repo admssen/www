@@ -1,6 +1,5 @@
 function authentify() {
-    document.getElementById('rolelist').innerHTML='';
-    document.getElementById('rolelist').style.minHeight = "36px";
+    document.getElementById('rolelist').innerHTML = '';
     var name = document.getElementById('name').value;
     var pass = document.getElementById('pass').value;
     var q = new XMLHttpRequest();
@@ -8,14 +7,15 @@ function authentify() {
     q.onload = function() {
         let stat = this.responseText;
         if (stat[0]==1) {
-            document.getElementById('rolelist').style.minHeight = "196px";
-            document.getElementById('authstat').innerHTML="AUTHORIZED AS";
-            document.getElementById('identified').innerHTML=name;
+            document.getElementById('desc').style.minHeight = "196px";
+            document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
+            document.getElementById('identified').innerHTML = name;
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
-            document.getElementById('identified').innerHTML="AUTH FAILURE";
+            document.getElementById('desc').style.minHeight = "36px";
+            document.getElementById('identified').innerHTML = "AUTH FAILURE";
         }
     }
     q.onerror = function() {
