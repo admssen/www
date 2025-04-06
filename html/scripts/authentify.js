@@ -9,12 +9,14 @@ function authentify() {
         let stat = this.responseText;
         if (stat[0]==1) {
             document.getElementById('desc').style.minHeight = "196px";
+            document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
+            document.getElementById('ver').innerHTML = "LOG IN";
             document.getElementById('authstat').style.color = "red";
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
