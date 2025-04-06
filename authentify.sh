@@ -5,7 +5,7 @@ if [ "$SEARCH" = "$1" ]; then
 	if [ "$VERIFY" = "$2" ]; then
 		ROLES="$(grep $1 /var/www/filesystem/roles/*)"
 		echo "1
-		${ROLES}"
+${ROLES}"
 	else
 		echo "0"
 	fi
