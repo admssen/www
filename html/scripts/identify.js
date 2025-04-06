@@ -1,5 +1,5 @@
 function identify() {
-    var name = "name="+document.getElementById('name').value;
+    var name = document.getElementById('name').value;
     console.log(name);
     var q = new XMLHttpRequest();
     q.open('POST', 'scripts/identify.php', true);
