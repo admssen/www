@@ -1,4 +1,5 @@
 function authentify() {
+    document.getElementById('rolelist').innerHTML=''
     var name = document.getElementById('name').value;
     var pass = document.getElementById('pass').value;
     var q = new XMLHttpRequest();
