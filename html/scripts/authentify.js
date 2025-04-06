@@ -16,6 +16,7 @@ function authentify() {
         } else {
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
+            document.getElementById('identified').innerHTML = "";
         }
     }
     q.onerror = function() {
