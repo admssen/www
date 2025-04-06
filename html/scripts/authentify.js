@@ -10,8 +10,7 @@ function authentify() {
             document.getElementById('authstat').innerHTML="AUTHORIZED AS";
             document.getElementById('identified').innerHTML=name;
             var roles = stat.split(/\r\n|\r|\n/);
-            stat.shift();
-            stat.pop();
+            stat = stat.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
             document.getElementById('identified').innerHTML="IDENTIFICATION: FAILURE";
