@@ -1,4 +1,5 @@
 function authentify() {
+    document.getElementById('authstat').style.textColor = "#f1e7f8";
     document.getElementById('rolelist').innerHTML = '';
     var name = document.getElementById('name').value;
     var pass = document.getElementById('pass').value;
@@ -14,6 +15,7 @@ function authentify() {
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
+            document.getElementById('authstat').style.textColor = "red";
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
             document.getElementById('identified').innerHTML = "";
