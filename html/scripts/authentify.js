@@ -6,8 +6,10 @@ function authentify() {
     q.onload = function() {
         let stat = this.responseText;
         if (stat[0]==1) {
-            document.getElementById('identified').innerHTML="IDENTIFICATION: SUCCESSFUL";
-            
+            document.getElementById('authstat').innerHTML="AUTHORIZED AS";
+            document.getElementById('identified').innerHTML=name;
+            var roles = stat.split(/\r\n|\r|\n/);
+            roles.forEach((role) => displayRoles(role));
         } else {
             document.getElementById('identified').innerHTML="IDENTIFICATION: FAILURE";
         }
@@ -17,4 +19,12 @@ function authentify() {
     }
     q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     q.send('name='+name+'&pass='+pass);
+}
+
+function displayRoles(role){
+    const box = document.getElementById('rolelist');
+    tmp = document.createElement('div');
+    tmp.classList.add('role');
+    tmp.innerHTML=role;
+    box.appendChild(tmp);
 }

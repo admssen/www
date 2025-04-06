@@ -12,14 +12,22 @@
 <div class="grid">
   <div class="login">
     <div class="main loga">
-      <div class="report" id="identified">NAME</div>
-      <input type="text" class="sender" id="name">
-      <div class="report">PASSWORD</div>
-      <input type="password" class="sender" id="pass">
-      <button onclick="authentify()">LOG IN</button>
+      <div class=fields>
+          <div class="report">NAME</div>
+          <input type="text" class="sender" id="name">
+          <div class="report">PASSWORD</div>
+          <input type="password" class="sender" id="pass">
+        </div>
+      <button onclick="authentify()" class="verifier">LOG IN</button>
     </div>
     <div class="main auth">
-      <div class="report">AUTHORIZED AS:</div>
+      <div class="fields">
+        <div class="report" id="authstat">AUTHORIZE?</div>
+        <div class="who" id="identified"></div>
+      </div>
+      <div class="roles" id="rolelist">
+        <div class="role">moderator</div>
+      </div>
     </div>
   </div>
 </div>
