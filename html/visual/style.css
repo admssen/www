@@ -43,7 +43,6 @@ button {
 	margin-left: 6px;
 	margin-right: 6px;
 	transition-duration: 0.4s;
-	box-shadow: 0px 2px #00000044;
 }
 
 .login {
@@ -130,4 +129,9 @@ button {
 
 .verifier:active {
   background-color: #000000;
+}
+
+.directorer {
+  width: 0px;
+  background-color: #66668800;
 }
