@@ -12,7 +12,7 @@ function authentify() {
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.width = "50%";
+            document.getElementById('dir').style.monWidth = "322px";
             document.getElementById('dir').style.backgroundColor = "#666688";
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
