@@ -5,7 +5,7 @@ function identify() {
     q.open('POST', 'scripts/identify.php', true);
     q.onload = function() {
         let stat = this.responseText;
-        if (stat!='') {
+        if (stat=='1') {
             console.log('success');
             document.getElementById('identified').innerHTML="IDENTIFICATION: SUCCESSFUL";
         }else {
