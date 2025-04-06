@@ -138,6 +138,5 @@ button {
 
 .viewer {
   width: 100%;
-  min-width: stretch;
   background-color: #66668800;
 }
