@@ -12,14 +12,14 @@ function authentify() {
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.visibility = "visible";
-            document.getElementById('eye').style.visibility = "visible";
+            document.getElementById('dir').style.backgroundColor = "#666688";
+            document.getElementById('eye').style.backgroundColor = "#666688";
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
-            document.getElementById('dir').style.visibility = "collapse";
-            document.getElementById('eye').style.visibility = "collapse";
+            document.getElementById('dir').style.backgroundColor = "#000000";
+            document.getElementById('eye').style.backgroundColor = "#000000";
             document.getElementById('ver').innerHTML = "LOG IN";
             document.getElementById('authstat').style.color = "red";
             document.getElementById('desc').style.minHeight = "36px";

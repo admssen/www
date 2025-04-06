@@ -133,12 +133,10 @@ button {
 
 .directorer {
   width: 166px;
-  background-color: #666688;
-  visibility: collapse;
+  background-color: #000000;
 }
 
 .viewer {
   width: 100%;
-  background-color: #666688;
-  visibility: collapse;
+  background-color: #000000;
 }
