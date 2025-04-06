@@ -12,8 +12,10 @@ function authentify() {
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.minWidth = "166px";
+            document.getElementById('dir').style.maxWidth = "166px";
             document.getElementById('dir').style.backgroundColor = "#666688";
+            document.getElementById('eye').style.maxWidth = "100%";
+            document.getElementById('eye').style.backgroundColor = "#666688";
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
@@ -23,8 +25,10 @@ function authentify() {
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
             document.getElementById('identified').innerHTML = "";
-            document.getElementById('dir').style.minWidth = "0px";
+            document.getElementById('dir').style.maxWidth = "0px";
             document.getElementById('dir').style.backgroundColor = "#66668800";
+            document.getElementById('eye').style.maxWidth = "0pc";
+            document.getElementById('eye').style.backgroundColor = "#66668800";
         }
     }
     q.onerror = function() {
