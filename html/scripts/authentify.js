@@ -24,6 +24,8 @@ function authentify() {
 }
 
 function displayRoles(role){
+    role=role.split(':')[0];
+    role.replaceAll('_', ' ');
     const box = document.getElementById('rolelist');
     tmp = document.createElement('div');
     tmp.classList.add('role');
