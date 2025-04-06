@@ -15,7 +15,7 @@ function authentify() {
             roles.forEach((role) => displayRoles(role));
         } else {
             document.getElementById('desc').style.minHeight = "36px";
-            document.getElementById('identified').innerHTML = "AUTH FAILURE";
+            document.getElementById('authstat').innerHTML = "FAILURE";
         }
     }
     q.onerror = function() {
