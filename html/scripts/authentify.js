@@ -12,9 +12,7 @@ function authentify() {
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.minWidth = "166px";
             document.getElementById('dir').style.backgroundColor = "#666688";
-            document.getElementById('eye').style.minWidth = "100%";
             document.getElementById('eye').style.backgroundColor = "#666688";
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
@@ -25,9 +23,7 @@ function authentify() {
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
             document.getElementById('identified').innerHTML = "";
-            document.getElementById('dir').style.minWidth = "0px";
             document.getElementById('dir').style.backgroundColor = "#66668800";
-            document.getElementById('eye').style.minWidth = "0px";
             document.getElementById('eye').style.backgroundColor = "#66668800";
         }
     }
