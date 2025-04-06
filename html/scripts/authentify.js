@@ -12,8 +12,8 @@ function authentify() {
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
             document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.backgroundColor = "#444466";
-            document.getElementById('eye').style.backgroundColor = "#444466";
+            document.getElementById('dir').style.backgroundColor = "#303044";
+            document.getElementById('eye').style.backgroundColor = "#303044";
             var roles = stat.split(/\r\n|\r|\n/);
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
