@@ -1,5 +1,6 @@
 function authentify() {
     document.getElementById('rolelist').innerHTML='';
+    document.getElementById('rolelist').style.minHeight = "36px";
     var name = document.getElementById('name').value;
     var pass = document.getElementById('pass').value;
     var q = new XMLHttpRequest();
@@ -7,6 +8,7 @@ function authentify() {
     q.onload = function() {
         let stat = this.responseText;
         if (stat[0]==1) {
+            document.getElementById('rolelist').style.minHeight = "196px";
             document.getElementById('authstat').innerHTML="AUTHORIZED AS";
             document.getElementById('identified').innerHTML=name;
             var roles = stat.split(/\r\n|\r|\n/);
