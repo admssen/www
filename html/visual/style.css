@@ -82,6 +82,16 @@ button {
   max-height: 100%;
 }
 
+.directory {
+  position: absolute;
+  bottom: 20px;
+  top: 0px;
+  left: 8px;
+  right: 8px;
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
 .sender {
   background-color: #101033;
   border-color: transparent;
@@ -95,6 +105,17 @@ button {
 .report {
   font-size: 12pt;
   margin-top: 10px;
+}
+
+.role {
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-right: 16px;
+  background-color: pink;
+  padding: 6px;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
 }
 
 .role {
@@ -153,7 +174,7 @@ button {
 }
 
 .directorer {
-  width: 166px;
+  width: 226px;
   background-color: #000008;
   position: relative;
 }
