@@ -6,6 +6,7 @@ function identify() {
     q.onload = function() {
         let stat = this.responseText;
         if (stat==name) {
+            console.log('success');
             document.getElementById('identified').innerHTML="IDENTIFICATION: SUCCESSFUL";
         }else {
             document.getElementById('identified').innetHTML="IDENTIFICATION: FAILURE";
