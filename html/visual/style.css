@@ -132,12 +132,11 @@ button {
 }
 
 .directorer {
-  max-width: 166px;
+  width: 166px;
   background-color: #66668800;
 }
 
 .viewer {
   max-width: 100%;
   background-color: #66668800;
-  position: absolute;
 }
