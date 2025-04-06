@@ -18,8 +18,8 @@ function authentify() {
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
-            document.getElementById('dir').style.backgroundColor = "#000000";
-            document.getElementById('eye').style.backgroundColor = "#000000";
+            document.getElementById('dir').style.backgroundColor = "#000008";
+            document.getElementById('eye').style.backgroundColor = "#000008";
             document.getElementById('ver').innerHTML = "LOG IN";
             document.getElementById('authstat').style.color = "red";
             document.getElementById('desc').style.minHeight = "36px";
