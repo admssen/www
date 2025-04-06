@@ -18,13 +18,13 @@ function authentify() {
             roles = roles.slice(1, -1);
             roles.forEach((role) => displayRoles(role));
         } else {
+            document.getElementById('dir').style.visibility = "collapse";
+            document.getElementById('eye').style.visibility = "collapse";
             document.getElementById('ver').innerHTML = "LOG IN";
             document.getElementById('authstat').style.color = "red";
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
             document.getElementById('identified').innerHTML = "";
-            document.getElementById('dir').style.visibility = "collapse";
-            document.getElementById('eye').style.visibility = "collapse";
         }
     }
     q.onerror = function() {
