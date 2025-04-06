@@ -5,9 +5,9 @@ function authentify() {
     q.open('POST', 'scripts/authentify.php', true);
     q.onload = function() {
         let stat = this.responseText;
-        console.log(stat)
         if (stat[0]==1) {
             document.getElementById('identified').innerHTML="IDENTIFICATION: SUCCESSFUL";
+            
         } else {
             document.getElementById('identified').innerHTML="IDENTIFICATION: FAILURE";
         }
