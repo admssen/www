@@ -132,6 +132,6 @@ button {
 }
 
 .directorer {
-  width: 0px;
+  min-width: 0px;
   background-color: #66668800;
 }
