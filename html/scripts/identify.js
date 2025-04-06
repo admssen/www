@@ -1,7 +1,7 @@
 function identify() {
     var name = "name="+document.getElementById('name').value;
     var q = new XMLHttpRequest();
-    q.open('POST', 'identify.php', true);
+    q.open('POST', 'scripts/identify.php', true);
     q.onload = function() {
         let stat = this.responseText;
         console.log(stat);
