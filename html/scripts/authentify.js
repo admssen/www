@@ -23,6 +23,8 @@ function authentify() {
             document.getElementById('desc').style.minHeight = "36px";
             document.getElementById('authstat').innerHTML = "FAILURE";
             document.getElementById('identified').innerHTML = "";
+            document.getElementById('dir').style.minWidth = "0px";
+            document.getElementById('dir').style.backgroundColor = "#66668800";
         }
     }
     q.onerror = function() {
