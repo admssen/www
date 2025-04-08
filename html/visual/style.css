@@ -176,6 +176,28 @@ button {
   right: 0px;
 }
 
+.renamer {
+  background-color: #334433;
+  border-color: transparent;
+  border-radius: 0px 5px 0px 0px;
+  color: #f1e7f8;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  right: 0px;
+}
+
+.assigner {
+  background-color: #334433;
+  border-color: transparent;
+  border-radius: 5px 0px 0px 0px;
+  color: #f1e7f8;
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  left: 0px;
+}
+
 button:hover {
   background-color: #aaaaaa;
 }
@@ -206,12 +228,40 @@ button:active {
   position: absolute;
   left: 8px;
   right: 0px;
-  top: 24px;
+  top: 70px;
+  bottom: 48px;
+  background-color: #101022;
+  border-color: transparent;
+  outline: none;
+  border-radius: 0px;
+  color: #f1e7f8;
+  margin-right: 10px;
+  resize: none;
+}
+
+.filename {
+  position: absolute;
+  left: 8px;
+  right: 0px;
+  top: 46px;
+  background-color: #101022;
+  border-color: transparent;
+  outline: none;
+  border-radius: 4px 4px 0px 0px;
+  color: #f1e7f8;
+  margin-right: 10px;
+  resize: none;
+}
+
+.accesslist {
+  border-radius: 0px 0px 4px 4px;
+  position: absolute;
+  left: 8px;
+  right: 0px;
   bottom: 24px;
   background-color: #101022;
   border-color: transparent;
   outline: none;
-  border-radius: 4px;
   color: #f1e7f8;
   margin-right: 10px;
   resize: none;
@@ -219,7 +269,7 @@ button:active {
 
 .point {
   position: absolute;
-  top: 0px;
+  top: 22px;
   left: 8px;
   right: 8px;
   font-size: 9pt;
