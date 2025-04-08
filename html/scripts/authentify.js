@@ -65,10 +65,10 @@ function createMenu() {
 
 function offerMenu(offer){
     var isdir='menuitem';
-    if (offer[1]=='-') {
+    if (offer[0]=='-') {
         isdir='menuitem';
     } else {
-        isdit='menudir';
+        isdir='menudir';
     }
     offer=offer.split(" ").slice(-1)[0];
     const box = document.getElementById('navi');
