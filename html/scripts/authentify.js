@@ -15,7 +15,7 @@ function authentify() {
             document.getElementById('dir').style.backgroundColor = "#303044";
             document.getElementById('eye').style.backgroundColor = "#303044";
             var roles = stat.split(/\r\n|\r|\n/);
-            var token = stat[1];
+            var token = roles[1];
             roles = roles.slice(2, -1);
             document.getElementById('token').innerHTML = token;
             roles.forEach((role) => displayRoles(role));
