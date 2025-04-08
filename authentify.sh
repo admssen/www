@@ -7,7 +7,7 @@ if [ "$SEARCH" = "$1" ]; then
 		ROLES="$(grep $1 *)"
 		cd /var/www/
 		TOKEN="$(./token_gen)"
-		echo $ROLES > /var/www/tokens/$TOKEN
+		echo "$ROLES" > /var/www/tokens/$TOKEN
 		echo "1
 ${TOKEN}
 ${ROLES}"

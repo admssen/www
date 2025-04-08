@@ -59,7 +59,7 @@ function visuallyLock(){
 }
 
 function createMenu() {
-    ["filesystem", "users", "roles"].forEach((offer) => offerMenu(offer));
+    ["objects", "subjects", "roles"].forEach((offer) => offerMenu(offer));
 }
 
 function offerMenu(offer){
@@ -72,5 +72,17 @@ function offerMenu(offer){
 }
 
 function authorizeAccess(offer){
+    var token = document.getElementById('token').value;
     console.log(offer);
+    var q = new XMLHttpRequest();
+    q.open('GET', 'scripts/authorize.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token);
 }
