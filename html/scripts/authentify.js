@@ -78,6 +78,11 @@ function authorizeAccess(offer){
     q.onload = function() {
         let stat = this.responseText;
         console.log(stat);
+        if (stat[0]==1){
+            document.getElementById('locate').innerHTML="success";
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
     }
     q.onerror = function() {
         console.log("nuh-uh");

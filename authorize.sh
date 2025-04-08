@@ -1,5 +1,8 @@
 #!/bin/bash
 cd /var/www
-./token_verify $1 $2
-cd /var/www/filesystem/$2
-ls
+ALLOW="$(./token_verify $1 $2)"
+if [ "$ALLOW" = "1" ]; then
+	cd /var/www/filesystem/$2
+	pwd
+	ls
+fi
