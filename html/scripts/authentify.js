@@ -75,7 +75,7 @@ function authorizeAccess(offer){
     var token = document.getElementById('token').value;
     console.log(offer);
     var q = new XMLHttpRequest();
-    q.open('GET', 'scripts/authorize.php', true);
+    q.open('POST', 'scripts/authorize.php', true);
     q.onload = function() {
         let stat = this.responseText;
         console.log(stat);
