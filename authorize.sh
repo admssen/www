@@ -1,4 +1,2 @@
 #!/bin/bash
-cd /var/www/filesystem/$1/
-pwd
-
+./token_verify $1 $2
