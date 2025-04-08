@@ -72,5 +72,5 @@ function offerMenu(offer){
 }
 
 function authorizeAccess(offer){
-    conseole.log(offer);
+    console.log(offer);
 }
