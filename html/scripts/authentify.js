@@ -60,13 +60,20 @@ function visuallyLock(){
 
 function createMenu() {
     document.getElementById('navi').innerHTML = "";
-    ["objects", "subjects", "roles"].forEach((offer) => offerMenu(offer));
+    ["- - - - - - objects", "- - - - - - subjects", "- - - - - - roles"].forEach((offer) => offerMenu(offer));
 }
 
 function offerMenu(offer){
+    var isdir='menuitem';
+    if {offer[0]=='-') {
+        isdir='menuitem';
+    } else {
+        isdit='menudir';
+    }
+    stat.split(" ")[6];
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
-    tmp.classList.add('menuitem');
+    tmp.classList.add(isdir);
     tmp.onclick=function() { authorizeAccess(offer) }
     tmp.innerHTML=offer;
     box.appendChild(tmp);
