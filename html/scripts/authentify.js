@@ -15,7 +15,7 @@ function authentify() {
             roles = roles.slice(2, -1);
             document.getElementById('token').innerHTML = token;
             roles.forEach((role) => displayRoles(role));
-            ["to the filesystem", "mamage users", "manage roles"].forEach((offer) => offerMenu(offer));
+            createMenu();
         } else {
             visuallyLock();
         }
@@ -54,12 +54,23 @@ function visuallyLock(){
     document.getElementById('desc').style.minHeight = "36px";
     document.getElementById('authstat').innerHTML = "FAILURE";
     document.getElementById('identified').innerHTML = "";
+    document.getElementById('token').innerHTML = "";
+    document.getElementById('navi').innerHTML = "";
+}
+
+function createMenu() {
+    ["filesystem", "users", "roles"].forEach((offer) => offerMenu(offer));
 }
 
 function offerMenu(offer){
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add('menuitem');
+    tmp.onclick=function()
     tmp.innerHTML=offer;
     box.appendChild(tmp);
+}
+
+function authorizeAccess(){
+    
 }
