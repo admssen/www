@@ -7,27 +7,17 @@ function authentify() {
     q.open('POST', 'scripts/authentify.php', true);
     q.onload = function() {
         let stat = this.responseText;
-        console.log(stat);
         if (stat[0]==1) {
-            document.getElementById('desc').style.minHeight = "196px";
-            document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
-            document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
+            visuallyGreet();
             document.getElementById('identified').innerHTML = name;
-            document.getElementById('dir').style.backgroundColor = "#303044";
-            document.getElementById('eye').style.backgroundColor = "#303044";
             var roles = stat.split(/\r\n|\r|\n/);
             var token = roles[1];
             roles = roles.slice(2, -1);
             document.getElementById('token').innerHTML = token;
             roles.forEach((role) => displayRoles(role));
+            ["to the filesystem", "mamage users", "manage roles"].forEach((offer) => offerMenu(offer));
         } else {
-            document.getElementById('dir').style.backgroundColor = "#000008";
-            document.getElementById('eye').style.backgroundColor = "#000008";
-            document.getElementById('ver').innerHTML = "LOG IN";
-            document.getElementById('authstat').style.color = "red";
-            document.getElementById('desc').style.minHeight = "36px";
-            document.getElementById('authstat').innerHTML = "FAILURE";
-            document.getElementById('identified').innerHTML = "";
+            visuallyLock();
         }
     }
     q.onerror = function() {
@@ -44,5 +34,32 @@ function displayRoles(role){
     tmp = document.createElement('div');
     tmp.classList.add('role');
     tmp.innerHTML=role;
+    box.appendChild(tmp);
+}
+
+function visuallyGreet(){
+    document.getElementById('desc').style.minHeight = "196px";
+    document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
+    document.getElementById('authstat').innerHTML = "AUTHORIZED AS";
+    document.getElementById('dir').style.backgroundColor = "#303044";
+    document.getElementById('eye').style.backgroundColor = "#303044";
+    document.getElementById('navi').innerHTML = "";
+}
+
+function visuallyLock(){
+    document.getElementById('dir').style.backgroundColor = "#000008";
+    document.getElementById('eye').style.backgroundColor = "#000008";
+    document.getElementById('ver').innerHTML = "LOG IN";
+    document.getElementById('authstat').style.color = "red";
+    document.getElementById('desc').style.minHeight = "36px";
+    document.getElementById('authstat').innerHTML = "FAILURE";
+    document.getElementById('identified').innerHTML = "";
+}
+
+function offerMenu(offer){
+    const box = document.getElementById('navi');
+    tmp = document.createElement('div');
+    tmp.classList.add('menuitem');
+    tmp.innerHTML=offer;
     box.appendChild(tmp);
 }
