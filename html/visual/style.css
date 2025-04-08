@@ -194,3 +194,8 @@ button:active {
   width: 100%;
   background-color: #000008;
 }
+
+.token {
+  font-size: 4pt;
+  color: grey;
+}
