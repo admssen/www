@@ -81,6 +81,7 @@ function authorizeAccess(offer){
         if (stat[0]=="1"){
             var items = stat.split(/\r\n|\r|\n/);
             var location = items[1];
+            location = location.substring(20, -1);
             items = items.slice(2, -1);
             document.getElementById('navi').innerHTML = "";
             items.forEach((offer) => offerMenu(offer));
