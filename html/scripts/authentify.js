@@ -7,6 +7,7 @@ function authentify() {
     q.open('POST', 'scripts/authentify.php', true);
     q.onload = function() {
         let stat = this.responseText;
+        console.log(stat);
         if (stat[0]==1) {
             document.getElementById('desc').style.minHeight = "196px";
             document.getElementById('ver').innerHTML = "CHANGE ACCOUNT";
@@ -16,7 +17,6 @@ function authentify() {
             document.getElementById('eye').style.backgroundColor = "#303044";
             var roles = stat.split(/\r\n|\r|\n/);
             var token = roles[1];
-            console.log(roles);
             roles = roles.slice(2, -1);
             document.getElementById('token').innerHTML = token;
             roles.forEach((role) => displayRoles(role));
