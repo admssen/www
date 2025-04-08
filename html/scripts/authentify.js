@@ -70,7 +70,7 @@ function offerMenu(offer){
     } else {
         isdit='menudir';
     }
-    offer=offer.split(" ")[8];
+    //offer=offer.split(" ")[8];
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
