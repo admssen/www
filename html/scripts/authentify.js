@@ -77,7 +77,7 @@ function authorizeAccess(offer){
     q.open('POST', 'scripts/authorize.php', true);
     q.onload = function() {
         let stat = this.responseText;
-        if (stat[0]==1){
+        if (stat[0]=="1"){
             document.getElementById('locate').innerHTML="success";
         } else {
             document.getElementById('locate').innerHTML="DENIED";
