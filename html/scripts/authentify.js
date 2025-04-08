@@ -65,7 +65,7 @@ function createMenu() {
 
 function offerMenu(offer){
     var isdir='menuitem';
-    if {offer[0]=='-') {
+    if {offer[0]=='-'} {
         isdir='menuitem';
     } else {
         isdit='menudir';
