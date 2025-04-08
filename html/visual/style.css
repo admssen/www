@@ -185,13 +185,14 @@ button:active {
 }
 
 .directorer {
-  width: 326px;
+  min-width: 166px;
   background-color: #000008;
   position: relative;
 }
 
 .viewer {
   width: 100%;
+  min-width: 200px;
   background-color: #000008;
   position: relative;
 }
@@ -199,4 +200,28 @@ button:active {
 .token {
   font-size: 4pt;
   color: grey;
+}
+
+.fileview {
+  position: absolute;
+  left: 8px;
+  right: 0px;
+  top: 22px;
+  bottom: 22px;
+  background-color: #101022;
+  border-color: transparent;
+  outline: none;
+  border-radius: 4px;
+  color: #f1e7f8;
+  margin-right: 10px;
+  resize: none;
+}
+
+.point {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  right: 8px;
+  font-size: 9pt;
+  padding: 6px 0px;
 }
