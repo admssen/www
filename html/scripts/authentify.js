@@ -80,10 +80,11 @@ function authorizeAccess(offer){
         console.log(stat);
         if (stat[0]=="1"){
             var items = stat.split(/\r\n|\r|\n/);
-            items = items.slice(1, -1);
+            var location = stat[1];
+            items = items.slice(2, -1);
             document.getElementById('navi').innerHTML = "";
             items.forEach((offer) => offerMenu(offer));
-            document.getElementById('locate').innerHTML="success";
+            document.getElementById('locate').innerHTML=location;
         } else {
             document.getElementById('locate').innerHTML="DENIED";
         }
