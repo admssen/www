@@ -121,7 +121,7 @@ button {
   background-color: #cccccc;
   padding: 2px 6px;
   border-radius: 4px;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -134,7 +134,7 @@ button {
   background-color: #888866;
   padding: 2px 6px;
   border-radius: 4px;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
