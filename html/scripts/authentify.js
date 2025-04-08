@@ -73,7 +73,7 @@ function offerMenu(offer){
 
 function authorizeAccess(offer){
     var token = document.getElementById('token').value;
-    console.log(offer);
+    console.log(token);
     var q = new XMLHttpRequest();
     q.open('POST', 'scripts/authorize.php', true);
     q.onload = function() {
