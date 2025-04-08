@@ -66,11 +66,11 @@ function offerMenu(offer){
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add('menuitem');
-    tmp.onclick=function()
+    tmp.onclick=function() { authorizeAccess(offer) }
     tmp.innerHTML=offer;
     box.appendChild(tmp);
 }
 
-function authorizeAccess(){
-    
+function authorizeAccess(offer){
+    conseole.log(offer);
 }
