@@ -5,8 +5,8 @@
 int main(int argc, char **argv) {
     std::string token = argv[1];
     std::string target = argv[2];
-    std::string tokenpath = "/home/liberty/Documents/mbks/www/tokens/"+token;
-    std::string targetpath = "/home/liberty/Documents/mbks/www/filesystem/"+target+"/.access/directory";
+    std::string tokenpath = "/var/www/tokens/"+token;
+    std::string targetpath = "/var/www/filesystem/"+target+"/.access/directory";
     std::ifstream access_rules;
     access_rules.open(targetpath);
     std::ifstream auth_token;
