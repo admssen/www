@@ -1,9 +1,4 @@
 body {
-  background-image: url("background2.jpg");
-  background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
   background-color: #161618;
   color: #f1e7f8;
   font-family: 'Courier New', monospace;
@@ -80,6 +75,7 @@ button {
   right: 8px;
   overflow-y: scroll;
   max-height: 100%;
+  background-color: black;
 }
 
 .directory {
@@ -109,8 +105,8 @@ button {
 
 .role {
   font-size: 8pt;
-  margin-top: 10px;
-  margin-right: 16px;
+  margin-top: 4px;
+  margin-right: 8px;
   background-color: pink;
   padding: 6px;
   border-radius: 4px;
