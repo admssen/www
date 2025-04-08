@@ -5,5 +5,5 @@ echo "$ALLOW"
 if [ "$ALLOW" = "1" ]; then
 	cd /var/www/filesystem/$2
 	pwd
-	ls -D
+	ls -l
 fi
