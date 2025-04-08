@@ -60,7 +60,7 @@ function visuallyLock(){
 
 function createMenu() {
     document.getElementById('navi').innerHTML = "";
-    ["- - - - - - - - - objects", "- - - - - - - - - subjects", "- - - - - - - - - roles"].forEach((offer) => offerMenu(offer));
+    ["d - - - - - - - - objects", "d - - - - - - - - subjects", "d - - - - - - - - roles"].forEach((offer) => offerMenu(offer));
 }
 
 function offerMenu(offer){
