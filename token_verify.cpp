@@ -8,14 +8,14 @@ int main(int argc, char **argv) {
     std::string target = argv[2];
     std::string action = argv[3];
     std::string itype = argv[4];
-    std::string targetpath
+    std::string targetpath;
     std::string tokenpath = "/var/www/tokens/"+token;
-    if (itype=="manuitem") {
-        targetpath = prefix+"/.access/"+action+"/"+target;
+    if (itype=="menuitem") {
+        targetpath = prefix+".access/"+action+"/"+target;
     } else {
-        targetpath = prefix+"/"+target+"/.access/directory";
+        targetpath = prefix+target+"/.access/directory";
     }
-    std::cout<<targetpath;
+    std::cout<<targetpath<<"\n";
     std::ifstream access_rules;
     access_rules.open(targetpath);
     std::ifstream auth_token;
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     char result='0';
     while (access_rules>>readrule){
         while (auth_token>>compareto){
-            //std::cout<<readrule<<" "<<compareto<<"\n";
+            std::cout<<readrule<<" "<<compareto<<"\n";
             if (compareto.find(readrule) != std::string::npos){
                 result='1';
             }
