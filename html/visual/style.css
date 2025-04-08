@@ -75,7 +75,6 @@ button {
   right: 8px;
   overflow-y: scroll;
   max-height: 100%;
-  background-color: black;
 }
 
 .directory {
@@ -106,7 +105,7 @@ button {
 .role {
   font-size: 8pt;
   margin-top: 4px;
-  margin-right: 8px;
+  margin-right: 16px;
   background-color: pink;
   padding: 6px;
   border-radius: 4px;
@@ -116,9 +115,9 @@ button {
 
 .menuitem {
   font-size: 8pt;
-  margin-top: 10px;
+  margin-top: 4px;
   margin-right: 16px;
-  background-color: yellow;
+  background-color: #cccccc;
   padding: 6px;
   border-radius: 4px;
   color: black;
@@ -181,7 +180,7 @@ button:active {
 }
 
 .directorer {
-  width: 226px;
+  width: 266px;
   background-color: #000008;
   position: relative;
 }
