@@ -125,14 +125,7 @@ button {
 }
 
 .menuitem:hover {
-  font-size: 8pt;
-  margin-top: 10px;
-  margin-right: 16px;
   background-color: #aaaaaa;
-  padding: 6px;
-  border-radius: 4px;
-  color: black;
-  font-weight: bold;
 }
 
 .verifier {
