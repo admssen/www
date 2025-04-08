@@ -15,7 +15,6 @@ int main(int argc, char **argv) {
     } else {
         targetpath = prefix+target+"/.access/directory";
     }
-    std::cout<<targetpath<<"\n";
     std::ifstream access_rules;
     access_rules.open(targetpath);
     std::ifstream auth_token;
@@ -25,7 +24,6 @@ int main(int argc, char **argv) {
     char result='0';
     while (access_rules>>readrule){
         while (auth_token>>compareto){
-            std::cout<<readrule<<" "<<compareto<<"\n";
             if (compareto.find(readrule) != std::string::npos){
                 result='1';
             }
