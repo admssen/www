@@ -59,6 +59,7 @@ function visuallyLock(){
 }
 
 function createMenu() {
+    document.getElementById('navi').innerHTML = "";
     ["objects", "subjects", "roles"].forEach((offer) => offerMenu(offer));
 }
 
