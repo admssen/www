@@ -79,10 +79,10 @@ button {
 
 .directory {
   position: absolute;
-  bottom: 20px;
-  top: 0px;
-  left: 8px;
-  right: 8px;
+  bottom: 22px;
+  top: 22px;
+  left: 0px;
+  right: 0px;
   overflow-y: scroll;
   max-height: 100%;
 }
@@ -116,6 +116,7 @@ button {
 .menuitem {
   font-size: 8pt;
   margin-top: 4px;
+  margin-left: 16px;
   margin-right: 16px;
   background-color: #cccccc;
   padding: 2px 6px;
@@ -136,6 +137,17 @@ button {
   color: #f1e7f8;
   position: absolute;
   bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.return {
+  background-color: #333344;
+  border-color: transparent;
+  border-radius: 5px 5px 0px 0px;
+  color: #f1e7f8;
+  position: absolute;
+  top: 0px;
   left: 0px;
   right: 0px;
 }
@@ -181,6 +193,7 @@ button:active {
 .viewer {
   width: 100%;
   background-color: #000008;
+  position: relative;
 }
 
 .token {
