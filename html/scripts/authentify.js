@@ -60,7 +60,7 @@ function visuallyLock(){
 
 function createMenu() {
     document.getElementById('navi').innerHTML = "";
-    ["- - - - - - - - objects", "- - - - - - - - subjects", "- - - - - - - - roles"].forEach((offer) => offerMenu(offer));
+    ["- - - - - - - - - objects", "- - - - - - - - - subjects", "- - - - - - - - - roles"].forEach((offer) => offerMenu(offer));
 }
 
 function offerMenu(offer){
@@ -70,7 +70,7 @@ function offerMenu(offer){
     } else {
         isdit='menudir';
     }
-    offer=offer.split(" ")[8];
+    offer=offer.split(" ")[9];
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
