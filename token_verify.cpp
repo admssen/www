@@ -3,10 +3,19 @@
 #include <fstream>
 
 int main(int argc, char **argv) {
+    std::string prefix = "/var/www/filesystem/";
     std::string token = argv[1];
     std::string target = argv[2];
+    std::string action = argv[3];
+    std::string itype = argv[4];
+    std::string targetpath
     std::string tokenpath = "/var/www/tokens/"+token;
-    std::string targetpath = "/var/www/filesystem/"+target+"/.access/directory";
+    if (itype=="manuitem") {
+        targetpath = prefix+"/.access/"+action+"/"+target;
+    } else {
+        targetpath = prefix+"/"+target+"/.access/directory";
+    }
+    std::cout<<targetpath;
     std::ifstream access_rules;
     access_rules.open(targetpath);
     std::ifstream auth_token;

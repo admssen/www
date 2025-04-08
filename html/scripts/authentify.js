@@ -74,14 +74,15 @@ function offerMenu(offer){
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
-    tmp.onclick=function() { authorizeAccess(offer) }
+    tmp.onclick=function() { authorizeAccess(offer, isdir) }
     tmp.innerHTML=offer;
     box.appendChild(tmp);
 }
 
-function authorizeAccess(offer){
+function authorizeAccess(offer, isdir){
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
     q.open('POST', 'scripts/authorize.php', true);
     q.onload = function() {
         let stat = this.responseText;
@@ -89,7 +90,7 @@ function authorizeAccess(offer){
         if (stat[0]=="1"){
             var items = stat.split(/\r\n|\r|\n/);
             var location = items[1];
-            location = location.substring(19, location.length);
+            location = location.substring(20, location.length);
             items = items.slice(3, -1);
             document.getElementById('navi').innerHTML = "";
             items.forEach((offer) => offerMenu(offer));
@@ -102,5 +103,5 @@ function authorizeAccess(offer){
         console.log("nuh-uh");
     }
     q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    q.send('destination='+offer+'&token='+token);
+    q.send('destination='+offer+'&token='+token+'&action=write&itype='+isdir);
 }
