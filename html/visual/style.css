@@ -118,11 +118,22 @@ button {
   font-weight: bold;
 }
 
-.role {
+.menuitem {
   font-size: 8pt;
   margin-top: 10px;
   margin-right: 16px;
-  background-color: pink;
+  background-color: yellow;
+  padding: 6px;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+}
+
+.menuitem:hover {
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-right: 16px;
+  background-color: #aaaaaa;
   padding: 6px;
   border-radius: 4px;
   color: black;
@@ -143,7 +154,7 @@ button {
 
 .newfile {
   margin-top: 40px;
-  background-color: #77c989;
+  background-color: #333344;
   border-color: transparent;
   border-radius: 0px 0px 0px 5px;
   color: #f1e7f8;
@@ -155,7 +166,7 @@ button {
 
 .delfile {
   margin-top: 40px;
-  background-color: #c98977;
+  background-color: #334433;
   border-color: transparent;
   border-radius: 0px 0px 5px 0px;
   color: #f1e7f8;
@@ -165,11 +176,11 @@ button {
   right: 0px;
 }
 
-.verifier:hover {
+button:hover {
   background-color: #aaaaaa;
 }
 
-.verifier:active {
+button:active {
   background-color: #000000;
 }
 
