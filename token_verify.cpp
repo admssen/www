@@ -16,6 +16,7 @@ int main(int argc, char **argv) {
     char result='0';
     while (access_rules>>readrule){
         while (auth_token>>compareto){
+            std::cout<<readrule<<" "<<compareto;
             if (compareto.find(readrule) != std::string::npos){
                 result='1';
             }
