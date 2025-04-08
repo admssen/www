@@ -71,7 +71,7 @@ function offerMenu(offer){
         isdit='menudir';
     }
     console.log(offer.split(" "));
-    offer=offer.split(" ")[9];
+    offer=offer.split(" ").last();
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
