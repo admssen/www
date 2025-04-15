@@ -9,8 +9,8 @@ fi
 ALLOW="$(./token_verify $1 $2 $3 $ASSIGNED $5)"
 echo "$ALLOW"
 if [ "$ALLOW" = "1" ]; then
-	GO="/var/www/filesystem/"$5"/"$2
+	GO="/var/www/filesystem/"$5
 	echo $GO
 	cd /bin
-	./cat $GO
+	./cat $GO"/"$2
 fi
