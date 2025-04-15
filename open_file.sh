@@ -10,6 +10,7 @@ ALLOW="$(./token_verify $1 $2 $3 $ASSIGNED $5)"
 echo "$ALLOW"
 if [ "$ALLOW" = "1" ]; then
 	GO="/var/www/filesystem/"$5"/"$2
+	echo $GO
 	cd /bin
 	./cat $GO
 fi
