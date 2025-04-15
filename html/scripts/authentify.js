@@ -183,6 +183,7 @@ function readFile(offer, isdir) {
             location = location.substring(20, location.length);
             items = items.slice(2, -1);
             document.getElementById('locate').innerHTML=location;
+            document.getElementById('fsname').value=offer;
             document.getElementById('pad').value=items.join('\n');
         } else {
             document.getElementById('locate').style.color="red";
