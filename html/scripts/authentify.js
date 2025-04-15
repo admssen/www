@@ -74,16 +74,209 @@ function offerMenu(offer){
     const box = document.getElementById('navi');
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
-    tmp.onclick=function() { authorizeAccess(offer, isdir) }
+    if (isdir='menudir'){
+        tmp.onclick=function() { listDir(offer, isdir) };
+    } else {
+        tmp.onclick=function() { openFile(offer, isdir) };
+    }
     tmp.innerHTML=offer;
     box.appendChild(tmp);
 }
 
-function authorizeAccess(offer, isdir){
+function newObj() {
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
     var prefix = document.getElementById('locate').innerHTML;
-    q.open('POST', 'scripts/authorize.php', true);
+    q.open('POST', 'scripts/new_obj.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=write&itype='+isdir);
+}
+
+function newDir() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/new_dir.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=write&itype='+isdir);
+}
+
+function listDir() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/list_dir.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+}
+
+function readFile() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/read_file.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+}
+
+function deleteFile() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/delete_file.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+}
+
+function writeFile() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/write_file.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+}
+
+function assignFile() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/assign_file.php', true);
+    q.onload = function() {
+        let stat = this.responseText;
+        console.log(stat);
+        if (stat[0]=="1"){
+            var items = stat.split(/\r\n|\r|\n/);
+            var location = items[1];
+            location = location.substring(20, location.length);
+            items = items.slice(3, -1);
+            document.getElementById('navi').innerHTML = "";
+            items.forEach((offer) => offerMenu(offer));
+            document.getElementById('locate').innerHTML=location;
+        } else {
+            document.getElementById('locate').innerHTML="DENIED";
+        }
+    }
+    q.onerror = function() {
+        console.log("nuh-uh");
+    }
+    q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+}
+
+function renameFile() {
+    var token = document.getElementById('token').innerHTML;
+    var q = new XMLHttpRequest();
+    var prefix = document.getElementById('locate').innerHTML;
+    q.open('POST', 'scripts/rename_file.php', true);
     q.onload = function() {
         let stat = this.responseText;
         console.log(stat);
