@@ -157,7 +157,7 @@ function listDir(offer, isdir) {
             items.forEach((offer) => offerMenu(offer));
             document.getElementById('locate').innerHTML=location;
         } else {
-            document.getElementById('locate').innerHTML="DENIED";
+            document.getElementById('locate').style.color="red";
         }
     }
     q.onerror = function() {
@@ -186,7 +186,7 @@ function readFile(offer, isdir) {
             items.forEach((offer) => offerMenu(offer));
             document.getElementById('locate').innerHTML=location;
         } else {
-            document.getElementById('locate').innerHTML="DENIED";
+            document.getElementById('locate').style.color="red";
         }
     }
     q.onerror = function() {
