@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
     std::string target = argv[2];
     std::string action = argv[3];
     std::string itype = argv[4];
+    std::string parent = argv[5];
     std::string targetpath;
     std::string tokenpath = "/var/www/tokens/"+token;
     if (itype=="menuitem") {
@@ -15,7 +16,7 @@ int main(int argc, char **argv) {
     } else if (itype=="menudir") {
         targetpath = prefix+target+"/.access/directory";
     } else {
-        targetpath = prefix+".access/directory";
+        targetpath = prefix+parent+"/.access/directory";
     }
     std::ifstream access_rules;
     access_rules.open(targetpath);

@@ -193,7 +193,7 @@ function readFile(offer, isdir) {
         console.log("nuh-uh");
     }
     q.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
+    q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir+'&parent='+prefix);
 }
 
 function deleteFile() {
