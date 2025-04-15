@@ -9,5 +9,5 @@ fi
 ALLOW="$(./token_verify $1 $2 $3 $ASSIGNED $5)"
 echo "$ALLOW"
 if [ "$ALLOW" = "1" ]; then
-	top
+	./bin/cat $PATH
 fi
