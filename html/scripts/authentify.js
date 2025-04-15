@@ -181,10 +181,11 @@ function readFile(offer, isdir) {
             var items = stat.split(/\r\n|\r|\n/);
             var location = items[1];
             location = location.substring(20, location.length);
-            items = items.slice(3, -1);
-            document.getElementById('navi').innerHTML = "";
-            items.forEach((offer) => offerMenu(offer));
+            items = items.slice(2, -1);
+            var disp="";
+            items.forEach((lne) => dis+"\n"+lne);
             document.getElementById('locate').innerHTML=location;
+            document.getElementById('pad').innerHTML=location;
         } else {
             document.getElementById('locate').style.color="red";
         }
