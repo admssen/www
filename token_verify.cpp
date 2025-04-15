@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     } else if (itype=="menudir") {
         targetpath = prefix+target+"/.access/directory";
     } else {
-        targetpath = prefix+".access/directory";
+        targetpath = prefix+"/roles/.access/directory";
     }
     std::ifstream access_rules;
     access_rules.open(targetpath);
