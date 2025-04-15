@@ -14,7 +14,7 @@ if [ "$ALLOW" = "1" ]; then
 	GO="/var/www/filesystem/"$5
 	echo $GO
 	cd /bin
-	./cat $PATH
+	./cat $APATH
 	echo "_content_start_"
 	./cat $GO"/"$2
 fi
