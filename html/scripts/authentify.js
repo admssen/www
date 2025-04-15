@@ -79,7 +79,7 @@ function offerMenu(offer){
         tmp.onclick=function() { listDir(offer, isdir) };
     } else {
         console.log('file');
-        tmp.onclick=function() { openFile(offer, isdir) };
+        tmp.onclick=function() { readFile(offer, isdir) };
     }
     tmp.innerHTML=offer;
     box.appendChild(tmp);
