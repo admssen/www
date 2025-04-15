@@ -178,13 +178,17 @@ function readFile(offer, isdir) {
         let stat = this.responseText;
         console.log(stat);
         if (stat[0]=="1"){
-            var items = stat.split(/\r\n|\r|\n/);
+            var content = stat.split("_content_start_")[1]
+            var items = stat.split("_content_start_")[0];
+            content = content.split(/\r\n|\r|\n/);
+            items = items.split(/\r\n|\r|\n/);
             var location = items[1];
             location = location.substring(20, location.length);
             items = items.slice(2, -1);
             document.getElementById('locate').innerHTML=location;
             document.getElementById('fsname').value=offer;
-            document.getElementById('pad').value=items.join('\n');
+            document.getElementById('signs').value=items.join(' ');
+            document.getElementById('pad').value=content.join('\n');
         } else {
             document.getElementById('locate').style.color="red";
         }
