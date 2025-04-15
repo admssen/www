@@ -169,6 +169,7 @@ function listDir(offer, isdir) {
 
 function readFile(offer, isdir) {
     console.log('read file');
+    console.log(offer);
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
     var prefix = document.getElementById('locate').innerHTML;
