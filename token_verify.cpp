@@ -17,7 +17,6 @@ int main(int argc, char **argv) {
     } else {
         targetpath = prefix+"./access/directory";
     }
-    std::cout<<targetpath;
     std::ifstream access_rules;
     access_rules.open(targetpath);
     std::ifstream auth_token;
@@ -35,5 +34,6 @@ int main(int argc, char **argv) {
     access_rules.close();
     auth_token.close();
     std::cout<<result<<"\n";
+    std::cout<<targetpath;
     return 0;
 }
