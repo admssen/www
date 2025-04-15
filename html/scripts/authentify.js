@@ -138,6 +138,7 @@ function newDir() {
 }
 
 function listDir(offer, isdir) {
+    console.log('list dir');
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
     var prefix = document.getElementById('locate').innerHTML;
@@ -165,6 +166,7 @@ function listDir(offer, isdir) {
 }
 
 function readFile() {
+    console.log('read file');
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
     var prefix = document.getElementById('locate').innerHTML;
