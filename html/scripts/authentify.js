@@ -167,7 +167,7 @@ function listDir(offer, isdir) {
     q.send('destination='+offer+'&token='+token+'&action=read&itype='+isdir);
 }
 
-function readFile() {
+function readFile(offer, isdir) {
     console.log('read file');
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
