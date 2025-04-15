@@ -9,6 +9,7 @@ fi
 ALLOW="$(./token_verify $1 $2 $3 $ASSIGNED $5)"
 echo "$ALLOW"
 if [ "$ALLOW" = "1" ]; then
-	TEXT="$(cat "/var/www/filesystem/"+$5+"/"+$2)"
+	GO="/var/www/filesystem/"+$5+"/"+$2
+	TEXT="$(cat $GO)"
 	echo $TEXT
 fi
