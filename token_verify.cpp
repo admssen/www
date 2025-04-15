@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
     std::string target = argv[2];
     std::string action = argv[3];
     std::string itype = argv[4];
-    std::string targetpath = "";
+    std::string targetpath;
     std::string tokenpath = "/var/www/tokens/"+token;
     if (itype=="menuitem") {
         targetpath = prefix+".access/"+action+"/"+target;
