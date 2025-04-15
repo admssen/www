@@ -1,12 +1,12 @@
 #!/bin/bash
 cd /var/www
-if [! -f "var/www/filesystem/.access/"+$3+"/"+$2]
+if [-e "var/www/filesystem/.access/"+$3+"/"+$2]
 then
-	echo "no"
-	ASSIGNED="none"
-else	
 	echo "yes"
 	ASSIGNED="menuitem"
+else	
+	echo "no"
+	ASSIGNED="none"
 fi
 ALLOW="$(./token_verify $1 $2 $3 $ASSIGNED)"
 echo "$ALLOW"
