@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /var/www
 if [! -f "var/www/filesystem/.access/"+$3+"/"+$2]
+then
 	echo "no"
 	ASSIGNED="none"
 else	
