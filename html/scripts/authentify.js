@@ -75,7 +75,7 @@ function offerMenu(offer){
     tmp = document.createElement('div');
     tmp.classList.add(isdir);
     if (isdir='menudir'){
-        console.log('file');
+        console.log('directory');
         tmp.onclick=function() { listDir(offer, isdir) };
     } else {
         console.log('file');
