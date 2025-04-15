@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /var/www
-PATH="var/www/filesystem/roles/.access/"+$3+"/"+$2
+PATH="/var/www/filesystem/roles/.access/"+$3+"/"+$2
 if [ -e $PATH ]; then
 	ASSIGNED="menuitem"
 else	
