@@ -137,7 +137,7 @@ function newDir() {
     q.send('destination='+offer+'&token='+token+'&action=write&itype='+isdir);
 }
 
-function listDir() {
+function listDir(offer, isdir) {
     var token = document.getElementById('token').innerHTML;
     var q = new XMLHttpRequest();
     var prefix = document.getElementById('locate').innerHTML;
