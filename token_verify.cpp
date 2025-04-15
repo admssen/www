@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     } else if (itype=="menudir") {
         targetpath = prefix+target+"/.access/directory";
     } else {
-        targetpath = prefix+"/roles/.access/directory";
+        targetpath = prefix+".access/directory";
     }
     std::ifstream access_rules;
     access_rules.open(targetpath);
@@ -34,6 +34,5 @@ int main(int argc, char **argv) {
     access_rules.close();
     auth_token.close();
     std::cout<<result<<"\n";
-    std::cout<<targetpath<<"\n";
     return 0;
 }
