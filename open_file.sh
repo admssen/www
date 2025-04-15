@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /var/www
-if ["var/www/filesystem/.access/"+$3+"/"+$2]
-then
+PATH="var/www/filesystem/.access/"+$3+"/"+$2
+if [ -e $PATH]; then
 	echo "yes"
 	ASSIGNED="menuitem"
 else	
