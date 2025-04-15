@@ -34,6 +34,6 @@ int main(int argc, char **argv) {
     access_rules.close();
     auth_token.close();
     std::cout<<result<<"\n";
-    std::cout<<targetpath;
+    std::cout<<targetpath<<"\n";
     return 0;
 }
