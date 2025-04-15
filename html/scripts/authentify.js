@@ -185,7 +185,7 @@ function readFile(offer, isdir) {
             var disp="";
             items.forEach((lne) => disp=disp+"\n"+lne);
             document.getElementById('locate').innerHTML=location;
-            document.getElementById('pad').value="nigger";
+            document.getElementById('pad').value=disp;
         } else {
             document.getElementById('locate').style.color="red";
         }
