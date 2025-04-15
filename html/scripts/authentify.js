@@ -178,7 +178,7 @@ function readFile(offer, isdir) {
         let stat = this.responseText;
         console.log(stat);
         if (stat[0]=="1"){
-            var content = stat.split("_content_start_")[1]
+            var content = stat.split("_content_start_\n")[1]
             var items = stat.split("_content_start_")[0];
             content = content.split(/\r\n|\r|\n/);
             items = items.split(/\r\n|\r|\n/);
