@@ -183,7 +183,7 @@ function readFile(offer, isdir) {
             location = location.substring(20, location.length);
             items = items.slice(2, -1);
             var disp="";
-            items.forEach((lne) => dis+"\n"+lne);
+            items.forEach((lne) => disp+"\n"+lne);
             document.getElementById('locate').innerHTML=location;
             document.getElementById('pad').innerHTML=location;
         } else {
