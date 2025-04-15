@@ -181,7 +181,7 @@ function readFile(offer, isdir) {
             var items = stat.split(/\r\n|\r|\n/);
             var location = items[1];
             location = location.substring(20, location.length);
-            items = items.slice(3, -1);
+            items = items.slice(2, -1);
             var disp="";
             items.forEach((lne) => disp=disp+"\n"+lne);
             document.getElementById('locate').innerHTML=location;
