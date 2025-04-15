@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /var/www
-if [-e "var/www/filesystem/.access/"+$3+"/"+$2]
+if ["var/www/filesystem/.access/"+$3+"/"+$2]
 then
 	echo "yes"
 	ASSIGNED="menuitem"
